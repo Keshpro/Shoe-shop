@@ -1,0 +1,324 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #f4f4f4; /* Light text for dark theme */
+            background-color: #0A0A0A; /* Very Dark Black Background */
+            scroll-behavior: smooth;
+        }
+
+        /* Utility Class for Content Centering */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #141414; /* Shiny Black for header */
+            color: #fff;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Lighter shadow for contrast */
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #FFFFFF; /* White on hover for 'shine' */
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('assets/img/herobg.jpg')
+                        center center/cover no-repeat;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 600px;
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.05); 
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            background: #333333; /* Dark Gray Button */
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            transition: background 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #555555; /* Lighter Gray Hover */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* General Section Styling */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #0A0A0A; /* Dark background */
+        }
+        
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #FFFFFF; /* White for main headings */
+        }
+
+        .subheading {
+            color: #A0A0A0; /* Gray for subheading */
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        /* Services Section (Content Boxes) */
+        .service-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .service-box {
+            background: #1C1C1C; /* Dark Gray background for box */
+            padding: 30px;
+            border-radius: 10px;
+            width: 320px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+            transition: 0.3s;
+            border-left: 5px solid #FFFFFF; /* White border for 'shine' */
+            text-align: left;
+            color: #ccc;
+        }
+        
+        .service-box h3 {
+            font-size: 1.5rem;
+            color: #FFFFFF; /* White title */
+            margin-bottom: 10px;
+        }
+
+        .service-box:hover {
+            background: #282828; /* Slightly darker hover effect */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+            transform: translateY(-5px);
+        }
+        
+        /* --- Category / Product Grid Styles --- */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+            padding-top: 20px;
+        }
+
+        .product-card {
+            background: #1C1C1C; /* Dark card background */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding-bottom: 20px;
+            border-top: 5px solid #FFFFFF; /* White accent border for 'shine' */
+            color: #f4f4f4;
+            text-align: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1); /* Subtle white shadow on hover */
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3, .product-card p, .product-card a {
+            margin: 0 20px 10px 20px;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #FFFFFF; /* White title */
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            color: #A0A0A0; /* Gray price */
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        /* Remove old category placeholder styles */
+        .category-content {
+            display: none; 
+        }
+
+        /* About */
+        .about {
+            background: #1C1C1C; /* Darker background for contrast */
+        }
+        
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        /* Contact */
+        .contact form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact input,
+        .contact textarea {
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            font-size: 1rem;
+            width: 100%;
+            background: #333; /* Dark input background */
+            color: #fff;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .contact input:focus,
+        .contact textarea:focus {
+            border-color: #FFFFFF; /* White focus border */
+            box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+            outline: none;
+        }
+
+        .contact button {
+            background: #333333; /* Dark Gray Button */
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact button:hover {
+            background: #555555; /* Lighter Gray Hover */
+        }
+
+        /* Footer */
+        footer {
+            background: #141414; /* Shiny Black footer */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        /* --- RESPONSIVENESS (Mobile Optimizations) --- */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .navbar .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-links {
+                margin-top: 10px;
+                gap: 15px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hero {
+                height: 70vh;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .service-boxes {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-box {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
