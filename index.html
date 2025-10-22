@@ -8,18 +8,28 @@
 </head>
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar">
-        <div class="container">
-            <h1 class="logo">Lace District</h1>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#category">Shop</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+  <div class="container">
+    <h1 class="logo">Lace District</h1>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+
+      <li class="dropdown">
+        <a href="#shop" class="dropbtn">Shop ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="#category">New Arrivals</a></li>
+          <li><a href="shop.html">Men's Styles</a></li>
+          <li><a href="shop.html">Women's Styles</a></li>
+          <li><a href="shop.html">Sportswear</a></li>
+        </ul>
+      </li>
+
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
     <!-- Hero Section -->
     <header id="home" class="hero">
@@ -54,7 +64,7 @@
     <!-- Category Section -->
     <section id="category" class="category">
         <div class="container">
-            <h2>Our Footwear Catalog</h2>
+            <h2>New Arrivals</h2>
             <p class="subheading">Find your style from our exclusive collections</p>
 
             <div class="product-grid">
@@ -99,9 +109,9 @@
         <div class="container">
             <h2>Contact Us</h2>
             <form>
-                <input type="text" placeholder="Your Name *" required />
-                <input type="email" placeholder="Your Email *" required />
-                <textarea placeholder="Your Message *" rows="6" required></textarea>
+                <input type="text" placeholder="Your Name " required />
+                <input type="email" placeholder="Your Email " required />
+                <textarea placeholder="Your Message " rows="6" required></textarea>
                 <button type="submit" class="btn">Send Message</button>
             </form>
         </div>

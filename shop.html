@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lace District</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+  <div class="container">
+    <h1 class="logo">Lace District</h1>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+
+      <li class="dropdown">
+        <a href="#shop" class="dropbtn">Shop ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="#category">New Arrivals</a></li>
+          <li><a href="#men">Men's Styles</a></li>
+          <li><a href="#women">Women's Styles</a></li>
+          <li><a href="#sale">Sportswear</a></li>
+        </ul>
+      </li>
+
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section with Inline CSS -->
+<header id="home" style="
+    height: 90vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: white;
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), 
+                url('assets/img/shop.jpg') center/cover no-repeat;
+">
+  <div>
+    <h1 style="font-size: 3rem; font-weight: 700; letter-spacing: 2px;">THE LACE DISTRICT SHOP</h1>
+    <p style="font-size: 1.2rem; margin-top: 10px;">Explore our latest collections and timeless styles.</p>
+  </div>
+</header>
+
+    <!-- 1. New Arrivals Section -->
+    <section id="new-arrivals" class="category-section">
+        <div class="container">
+            <h2>New Arrivals</h2>
+            <p class="subheading">Fresh looks. Be the first to step out in style.</p>
+            
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <img src="assets/img/Zenith Run Sneaker.jpg" alt="Zenith Sneaker" class="product-image">
+                    <h3 class="product-title">Zenith Run Sneaker</h3>
+                    <p class="product-price">Rs.12000.00</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+                </div>
+                
+                <div class="product-card">
+                    <img src="assets/img/Luxe Block Heel.avif" alt="Luxe Block Heel" class="product-image">
+                    <h3 class="product-title">Luxe Block Shoe</h3>
+                    <p class="product-price">Rs.8500.00</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+                </div>
+                
+                <div class="product-card">
+                    <img src="assets/img/Hydro-Fit Slide.webp" alt="Premium Slide Sandal" class="product-image">
+                    <h3 class="product-title">Hydro-Fit Slide</h3>
+                    <p class="product-price">Rs.5000.00</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+                </div>
+                
+                <div class="product-card">
+                    <img src="assets/img/Classic Leather Loafer.webp" alt="Leather Loafer" class="product-image">
+                    <h3 class="product-title">Classic Leather Shoes</h3>
+                    <p class="product-price">Rs.13000.00</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- 2. Men's Style Section -->
+    <section id="mens" class="category-section" style="background-color: #1C1C1C;">
+        <div class="container">
+            <h2>Men's Style</h2>
+            <p class="subheading">Rugged, refined, and ready for anything.</p>
+            
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <img src="assets/img/Urban Explorer Boot.jpg" alt="Urban Explorer Boot" class="product-image">
+                    <h3 class="product-title">Urban Explorer Boot</h3>
+                    <p class="product-price">Rs.14900.00</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+                </div>
+                
+                <div class="product-card">
+                    <img src="assets/img/The Executive Oxford.jpg" alt="Oxford Dress Shoe" class="product-image">
+                    <h3 class="product-title">The Executive Oxford</h3>
+                    <p class="product-price">Rs.22000.00</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+                </div>
+                
+                <div class="product-card">
+                    <img src="assets/img/Suede Commuter.jpg" alt="Suede Casual" class="product-image">
+                    <h3 class="product-title">Suede Commuter</h3>
+                    <p class="product-price">Rs.7500.00</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+                </div>
+                
+                <div class="product-card">
+                    <img src="assets/img/Apex Performance Trainer.jpg" alt="Performance Runner" class="product-image">
+                    <h3 class="product-title">Apex Performance Trainer</h3>
+                    <p class="product-price">Rs.10000.00</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Women's Style Section -->
+    <section id="womens" class="category-section">
+        <div class="container">
+            <h2>Women's Style</h2>
+            <p class="subheading">Elegance and comfort for every occasion.</p>
+            
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <img src="assets/img/Midnight Stiletto.jpg" alt="Midnight Stiletto" class="product-image">
+                    <h3 class="product-title">Midnight Stiletto</h3>
+                    <p class="product-price">Rs.3500.00</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+                </div>
+                
+                <div class="product-card">
+                    <img src="assets/img/Soft Comfort Ballet Flat.avif" alt="Ballet Flat" class="product-image">
+                    <h3 class="product-title">Soft Comfort Ballet Flat</h3>
+                    <p class="product-price">Rs.2500.00</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+                </div>
+                
+                <div class="product-card">
+                    <img src="assets/img/Sleek Leather Bootie.avif" alt="Ankle Bootie" class="product-image">
+                    <h3 class="product-title">Sleek Leather Bootie</h3>
+                    <p class="product-price">Rs.15000.00</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+                </div>
+                
+                <div class="product-card">
+                    <img src="assets/img/bqq01488_black_xl.webp" alt="Pointed Pump" class="product-image">
+                    <h3 class="product-title">Classic Pointed Pump</h3>
+                    <p class="product-price">Rs.4500.00</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Sportswear Section -->
+    <section id="sportswear" class="category-section" style="background-color: #1C1C1C;">
+        <div class="container">
+            <h2>Sportswear</h2>
+            <p class="subheading">Engineered for performance, designed for speed.</p>
+            
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <img src="assets/img/Cross-Fit Trainer.jpg" alt="Gym Trainer" class="product-image">
+                    <h3 class="product-title">Cross-Fit Trainer</h3>
+                    <p class="product-price">RS.6500.00</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+                </div>
+                
+                <div class="product-card">
+                    <img src="assets/img/Marathon Runner X.webp" alt="Running Shoe" class="product-image">
+                    <h3 class="product-title">Marathon Runner X</h3>
+                    <p class="product-price">RS15500.00</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+                </div>
+                
+                <div class="product-card">
+                    <img src="assets/img/Trailblazer Hiker.jpg" alt="Hiking Boot" class="product-image">
+                    <h3 class="product-title">Trailblazer Hiker</h3>
+                    <p class="product-price">Rs21800.00</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+                </div>
+                
+                <div class="product-card">
+                    <img src="assets/img/Court Master Mid.jpg" alt="Basketball Shoe" class="product-image">
+                    <h3 class="product-title">Court Master Mid</h3>
+                    <p class="product-price">TS.5120.00</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Lace District | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
