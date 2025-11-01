@@ -18,7 +18,7 @@ body {
   margin: auto;
 }
 
-
+/* --- NAVBAR --- */
 .navbar {
   background: #141414;
   color: #fff;
@@ -96,17 +96,16 @@ body {
   display: block;
 }
 
-
 /* --- MOBILE DROPDOWN FIX --- */
 @media (max-width: 768px) {
   .dropdown:hover .dropdown-content,
   .dropdown-content:hover {
-  display: block;
-}
-
+    display: block;
+  }
 
   .dropdown:active .dropdown-content {
     display: block;
+  }
 }
 
 /* --- HERO SECTION --- */
@@ -359,5 +358,3 @@ footer {
     max-width: 400px;
   }
 }
-
-        }
