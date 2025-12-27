@@ -1,3 +1,6 @@
+/* =========================================
+   1. GLOBAL STYLES & RESET
+   ========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +11,7 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   line-height: 1.6;
   color: #f4f4f4;
-  background-color: #0A0A0A;
+  background-color: #0A0A0A; /* Deep Dark Background */
   scroll-behavior: smooth;
 }
 
@@ -18,7 +21,9 @@ body {
   margin: auto;
 }
 
-/* --- NAVBAR --- */
+/* =========================================
+   2. NAVBAR STYLES
+   ========================================= */
 .navbar {
   background: #141414;
   color: #fff;
@@ -36,7 +41,7 @@ body {
 }
 
 .logo {
-  font-family: 'Amaze', sans-serif;
+  font-family: 'Amaze', sans-serif; /* Or generic fantasy font */
   font-size: 1.8rem;
   font-weight: 900;
   letter-spacing: 0.5px;
@@ -58,10 +63,10 @@ body {
 }
 
 .nav-links a:hover {
-  color: #f0c14b;
+  color: #f0c14b; /* Gold Accent */
 }
 
-/* --- DROPDOWN --- */
+/* Dropdown Menu */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -96,20 +101,11 @@ body {
   display: block;
 }
 
-/* --- MOBILE DROPDOWN FIX --- */
-@media (max-width: 768px) {
-  .dropdown:hover .dropdown-content,
-  .dropdown-content:hover {
-    display: block;
-  }
-
-  .dropdown:active .dropdown-content {
-    display: block;
-  }
-}
-
-/* --- HERO SECTION --- */
+/* =========================================
+   3. HERO SECTION
+   ========================================= */
 .hero {
+  /* Make sure you have an image at assets/img/herobg.jpg */
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url('assets/img/herobg.jpg') center center/cover no-repeat;
   height: 90vh;
@@ -134,7 +130,7 @@ body {
   line-height: 1.2;
 }
 
-/* --- BUTTON --- */
+/* Generic Button Style */
 .btn {
   display: inline-block;
   background: #333;
@@ -155,7 +151,9 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* --- SECTIONS --- */
+/* =========================================
+   4. SECTIONS (General)
+   ========================================= */
 section {
   padding: 60px 20px;
   text-align: center;
@@ -166,6 +164,7 @@ section h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
   color: #fff;
+  text-transform: uppercase;
 }
 
 .subheading {
@@ -174,7 +173,9 @@ section h2 {
   font-size: 1.1rem;
 }
 
-/* --- SERVICES --- */
+/* =========================================
+   5. SERVICES & PRODUCTS
+   ========================================= */
 .service-boxes {
   display: flex;
   flex-wrap: wrap;
@@ -202,11 +203,10 @@ section h2 {
 
 .service-box:hover {
   background: #282828;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
   transform: translateY(-5px);
 }
 
-/* --- PRODUCT GRID --- */
+/* Product Grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -254,71 +254,174 @@ section h2 {
   margin-bottom: 15px;
 }
 
-/* --- ABOUT --- */
-.about {
-  background: #1C1C1C;
+/* =========================================
+   6. FEEDBACK PAGE STYLES (Styles for the Form)
+   ========================================= */
+.feedback-box {
+    background: #1C1C1C;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    border-top: 5px solid #fff;
+    text-align: left;
 }
 
-.about p {
-  max-width: 800px;
-  margin: auto;
-  font-size: 1.1rem;
-  color: #ccc;
+.feedback-box h2 {
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 2rem;
 }
 
-/* --- CONTACT --- */
-.contact form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.feedback-box p {
+    color: #A0A0A0;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.contact input,
-.contact textarea {
-  padding: 12px;
-  border-radius: 5px;
-  border: 1px solid #555;
-  font-size: 1rem;
-  width: 100%;
-  background: #333;
-  color: #fff;
-  transition: border-color 0.3s, box-shadow 0.3s;
+/* Inputs */
+.input-group {
+    margin-bottom: 20px;
 }
 
-.contact input:focus,
-.contact textarea:focus {
-  border-color: #fff;
-  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
-  outline: none;
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #f4f4f4;
+    font-weight: 500;
 }
 
-.contact button {
-  background: #333;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background 0.3s;
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #333; /* Dark Input */
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    transition: 0.3s;
+    font-family: inherit;
 }
 
-.contact button:hover {
-  background: #555;
+.input-group input:focus, 
+.input-group select:focus, 
+.input-group textarea:focus {
+    border-color: #f0c14b; /* Gold Focus */
+    outline: none;
 }
 
-/* --- FOOTER --- */
+/* Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #f0c14b;
+    color: #000;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #A0A0A0;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.back-link:hover {
+    color: #fff;
+}
+
+/* =========================================
+   7. LIVE REVIEWS SECTION (New Feature Styles)
+   ========================================= */
+.reviews-container {
+    max-width: 600px;
+    margin: 40px auto;
+    color: #fff;
+}
+
+.reviews-container h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #f0c14b; /* Gold Header */
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+/* Review Card Style */
+.review-card {
+    background: #1C1C1C;
+    border-left: 4px solid #f0c14b; /* Gold Stripe */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    animation: slideDown 0.5s ease-out; /* Animation */
+}
+
+.review-card h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-card .stars {
+    font-size: 1rem;
+    color: #f0c14b; /* Gold Stars */
+}
+
+.review-card p {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Animation for new reviews popping in */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   8. FOOTER & RESPONSIVE
+   ========================================= */
 footer {
   background: #141414;
   color: white;
   text-align: center;
   padding: 20px 0;
   font-size: 0.9rem;
+  margin-top: 50px;
 }
 
-/* --- RESPONSIVE --- */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .container {
     width: 95%;
@@ -330,10 +433,20 @@ footer {
   }
 
   .nav-links {
-    margin-top: 10px;
+    margin-top: 15px;
     gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  /* Fix for dropdown on mobile touch */
+  .dropdown:hover .dropdown-content,
+  .dropdown-content:hover {
+    display: block;
+    position: static;
+    width: 100%;
+    text-align: center;
+    background: #111;
   }
 
   .hero {
@@ -353,8 +466,8 @@ footer {
     align-items: center;
   }
 
-  .service-box {
+  .service-box, .product-card, .feedback-box, .reviews-container {
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
   }
 }

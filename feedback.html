@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Shoe Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">SHOE SHOP 👟</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li class="dropdown">
+                    <a href="#">Categories ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Men's Shoes</a></li>
+                        <li><a href="#">Women's Shoes</a></li>
+                        <li><a href="#">Sports</a></li>
+                    </ul>
+                </li>
+                <li><a href="feedback.html" style="color: #f0c14b;">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="feedback-box">
+            <h2>We Value Your Feedback!</h2>
+            <p>Tell us about your new shoes. Your opinion matters to us.</p>
+            
+            <form id="feedbackForm">
+                <div class="input-group">
+                    <label>Your Name</label>
+                    <input type="text" id="userName" placeholder="Enter your name" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="userPhoneNumber" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Rate our Shoes</label>
+                    <select id="userRating" required>
+                        <option value="" disabled selected>Select a rating</option>
+                        <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                        <option value="4">⭐⭐⭐⭐ - Good</option>
+                        <option value="3">⭐⭐⭐ - Average</option>
+                        <option value="2">⭐⭐ - Poor</option>
+                        <option value="1">⭐ - Very Bad</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Your Review</label>
+                    <textarea id="userMessage" rows="5" placeholder="Write your review here..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Feedback</button>
+            </form>
+            
+            <a href="index.html" class="back-link">← Back to Shop</a>
+        </div>
+
+        <div class="reviews-container">
+            <h3>Recent Customer Reviews</h3>
+            
+            <div id="reviewsList">
+                <div class="review-card">
+                    <h4>Kasun Perera <span class="stars">⭐⭐⭐⭐⭐</span></h4>
+                    <p>Patta shoes tika! Quality eka supiri. Delivery ekath ikman.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Shoe Shop. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevents the page from refreshing
+
+            // 1. Get values from the form
+            const name = document.getElementById('userName').value;
+            const rating = document.getElementById('userRating').value;
+            const message = document.getElementById('userMessage').value;
+
+            // 2. Generate Star String based on rating number
+            let stars = '';
+            for(let i = 0; i < rating; i++) {
+                stars += '⭐';
+            }
+
+            // 3. Create a new review card div
+            const newReview = document.createElement('div');
+            newReview.classList.add('review-card');
+
+            // 4. Set the inner HTML of the new card
+            newReview.innerHTML = `
+                <h4>${name} <span class="stars">${stars}</span></h4>
+                <p>${message}</p>
+            `;
+
+            // 5. Add the new review to the top of the list
+            const reviewsList = document.getElementById('reviewsList');
+            reviewsList.prepend(newReview);
+
+            // 6. Clear the form fields
+            document.getElementById('feedbackForm').reset();
+
+            // Optional: Alert or small notification
+            // alert('Thank you for your feedback!');
+        });
+    </script>
+
+</body>
+</html>

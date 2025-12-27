@@ -5,6 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lace District</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+    /* Floating Feedback Button Styles */
+    .feedback-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #c63333; /* Theme Red Color */
+        color: white;
+        padding: 15px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-weight: bold;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        transition: transform 0.3s, background 0.3s;
+        z-index: 1000; /* Ensure it stays on top */
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .feedback-btn:hover {
+        background-color: #a02222; /* Darker Red on Hover */
+        transform: translateY(-5px); /* Move up slightly */
+    }
+
+    /* Mobile Responsive adjustment */
+    @media (max-width: 768px) {
+        .feedback-btn {
+            padding: 12px 20px;
+            bottom: 20px;
+            right: 20px;
+            font-size: 14px;
+        }
+    }
+</style>
 </head>
 <body>
 
@@ -27,6 +63,7 @@
 
       <li><a href="aboutus.html">About</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a herf="#">Cart</a></li>
     </ul>
   </div>
 </nav>
@@ -104,23 +141,12 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Your Name " required />
-                <input type="email" placeholder="Your Email " required />
-                <textarea placeholder="Your Message " rows="6" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Lace District | All Rights Reserved</p>
     </footer>
-
+ <a href="feedback.html" class="feedback-btn">
+    <span>💬</span> Rate Us
+</a>
 </body>
 </html>
